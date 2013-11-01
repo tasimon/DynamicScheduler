@@ -1,17 +1,16 @@
 ==========
 
-knapsack scheduler
+Knapsack Scheduler
 Tyler Simon
 
 ==========
-
 
 knapsack:
 single cycle, selects maximum value using priority and has an associated failure rate
 
 to compile:
 
-cc -o knapsack knapsack.c -lm
+make knapsack
 
 inputfile : input.dat
 
@@ -51,10 +50,11 @@ poiss(2,3) = 18.0447%
 knapsack2: is a fractional  (or 0/1) knapsack scheduler used to simulate Map/Reduce workloads
 =================
 
-to compile: cc -o knapsack2 knapsack2.c 
+to compile: make knapsack2
 
 to Run: ./knapsack2 1 1 1 1000 5
 
+note: "make all" to make both
 
 output is in .arff format to be viewed with the WEKA machine learning toolkit
 http://www.cs.waikato.ac.nz/ml/weka/
