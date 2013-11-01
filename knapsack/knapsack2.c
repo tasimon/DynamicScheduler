@@ -16,25 +16,6 @@ Modified knapsack algorithm from:
 Job priorities equation from:
 "Scheduling Jobs on Parallel Systems Using a Relaxed Backfill Strategy, by Ward, Mahood, West (2001)
 
-**********************
-To compile:
-cc -o knapsack knapsack.c -lm
-
-
-To Run: 
-./knapsack [alpha] [beta] [gamma] [number of cores available] [number of jobs in input file] 
-
-**********************
-
-format of input.dat
-[jobid] [weight(tasks)] [runtime per task] [waittime] [share value]
-1 10 3 1 0.50
-2 15 200 1 0.80
-3 20 40 1 0.20
-
-output ARFF format 
-% jobID tasks runtime waittime failval alpha beta gamma capacity totaljobs
-******/
 
 /* prints out some info */
 #ifndef DEBUG
