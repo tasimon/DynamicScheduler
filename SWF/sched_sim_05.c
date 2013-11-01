@@ -2,23 +2,11 @@
 * Calculate Job Priority
 * Tyler Simon
 * 12/14/2011
-* version 05 uses swf formatted files from
+* this version  uses swf formatted files from
 * http://www.cs.huji.ac.il/labs/parallel/workload/logs.html
 *   1  0  6680  7560  2048  -1  -1  2048  10800  -1  -1  1  -1  -1  1  -1  -1  -1
-* 
-* To Compile:
-* gcc -o jobpriority jobpriority.c -lm
-*
-* To Run:
-* ./jobpriority
-*
-* Required: jobfile.txt
-* <cores> <waittime> <runtime> <queue priority>
-* 
-* Required: tunables.txt
-* <alpha> <beta> <gamma> <average runtime per job> <average cores per job> <system size>
-* 
 *************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
