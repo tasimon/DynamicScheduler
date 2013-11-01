@@ -111,13 +111,10 @@ set trange [ * : * ] noreverse nowriteback  # (currently [-5.00000:5.00000] )
 set urange [ * : * ] noreverse nowriteback  # (currently [-5.00000:5.00000] )
 set vrange [ * : * ] noreverse nowriteback  # (currently [-5.00000:5.00000] )
 set yrange[0:1]
-set xlabel "Workload Runtime (seconds)" 0.000000,0.000000  font ""
-set x2label "" 0.000000,0.000000  font ""
-set ylabel "Percentage of System Utilization" 0.000000,0.000000  font ""
-set y2label "Number of Running Jobs" 0.000000,0.000000  font ""
-set zlabel "" 0.000000,0.000000  font ""
+set xlabel "Workload Runtime (seconds)"
+set ylabel "Percentage of System Utilization"
+set y2label "Number of Running Jobs"
 set zrange [ * : * ] noreverse nowriteback  # (currently [-10.0000:10.0000] )
-set cblabel "" 0.000000,0.000000  font ""
 set cbrange [ * : * ] noreverse nowriteback  # (currently [-10.0000:10.0000] )
 set zero 1e-08
 set lmargin -1
