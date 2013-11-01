@@ -1,0 +1,21 @@
+@relation fairshare
+@attribute jobid numeric
+@attribute tasks numeric
+@attribute runtime numeric
+@attribute waittime numeric
+@attribute fairval numeric
+@attribute alpha numeric
+@attribute beta numeric
+@attribute gamma numeric
+@attribute capacity numeric
+@attribute totaljobs numeric
+@attribute tics numeric
+@attribute timepertask numeric
+@attribute ResponseValue numeric
+@attribute class {LrgLng,LrgSht,SmlLng,SmlSht}
+@data
+5, 110, 6.0, 119.0, 0.4, 1.0, 1.0, 1.0, 1000, 5, 231, 6.0, 20.8, SmlSht
+3, 70, 4.0, 119.0, 0.7, 1.0, 1.0, 1.0, 1000, 5, 231, 4.0, 30.8, SmlSht
+2, 60, 224.0, 1.0, 0.8, 1.0, 1.0, 1.0, 1000, 5, 231, 112.0, 1.0, SmlLng
+1, 60, 224.0, 1.0, 0.5, 1.0, 1.0, 1.0, 1000, 5, 231, 112.0, 1.0, SmlLng
+4, 900, 8.0, 114.0, 0.8, 1.0, 1.0, 1.0, 1000, 5, 231, 4.0, 15.2, LrgSht

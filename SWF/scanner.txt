@@ -1,0 +1,1 @@
+time ./sched_sim_05 ANL-100.inp | sort -nk6 | grep SmlLng | awk '{print $6}' | perl -e 'while(<>){$sum+=$_; $count++;}printf "%f\n",$sum/$count;'

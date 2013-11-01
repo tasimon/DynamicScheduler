@@ -1,0 +1,71 @@
+------------------------
+Dynamic Priority HPC Scheduling Simulator
+Tyler Simon
+tsimo1@umbc.edu
+------------------------
+
+This is a suite of 3 scheduling simulators that are very similar. 
+They all use a single queue and dynamic job priorities. This means that each waiting job will have it's priority modified based on it's size, duration and the properties of other waiting jobs.
+
+
+ .  This directory contains a generic scheduler (sched_sim_04) with simple input files
+   |-knapsack  //contains a simple knapsack and fractional knapsack scheduler for map/reduce jobs
+   |-SWF //scheduling simlulator using SWF (Standard Workload Format) data from real machines
+   |---data //the data for the general scheduler (sched_sim_04)
+
+
+--------------------------------------
+To compile:
+
+make
+
+To Run: ./sched_sim_04 <aplha> <beta> <gamma> <system size> <input file>
+./sched_sim_04 1 1 1 800 job100.txt  | less
+
+To view results:
+gnuplot -persist plotutil.gp
+
+
+======================================
+Input file format: each line is a job
+<cores> <waittime> <runtime> <priority>
+
+100 1 5 10
+50 1 10 10
+150 1 15 10 
+300 1 5 10
+401 1 3 10
+10 1 5 10
+
+------------
+Output files
+------------
+utilization.txt: this file gives a per tick jobs and utilization count that can be plotted over time
+format: <tick> <cores total> <cores used> <utilization> <number of jobs running>
+1 800 800 1.000 4
+2 800 800 1.000 4
+3 800 800 1.000 4
+4 800 800 1.000 4
+5 800 800 1.000 4
+
+If you have gnuplot installed
+you can plot the results over time by running `gnuplot -persist plotutil.gp`
+This reads the utilization.txt file
+
+
+expf.txt
+format:
+#ID	cores	runtime	waittime	expFactor ratio_d ratio_s class
+ 34	401   	3 	158 		53.67 	  0.21 	0.50 	  LrgSht
+ 84 	401   	3 	152 		51.67 	  0.21 	0.50 	  LrgSht
+
+wait.txt: 
+A summary of the run giving total runtime,waittime and utilization for system size (800), and a,b,g values
+800 1.000000 1.000000 1.000000 160 7384 86.23
+800 1.000000 1.000000 1.000000 160 7384 86.23
+
+
+
+Notes:
+I could add an arff formatted output file for the generic scheduler like we have for knapsack2, let me know if that would be more useful to view the "expf.txt" files. Also I can print the a,b,g values to see how they corralate to waittimes and response time.
+
