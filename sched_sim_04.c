@@ -1,16 +1,9 @@
 /************************
-* Calculate Job Priority
+* HPC Scheduler using 
+* single Queue with individual job Priorities
 * Tyler Simon
-* 10/14/2013
+* 10/14/2012
 * 
-* To Compile:
-* cc -o sched_sim_04 sched_sim_04.c -lm
-*
-* To Run:
-* ./sched_sim_04 <alpha> <beta> <gamma> <system size>
-*
-* Required: jobfile.txt
-* <cores> <waittime> <runtime> <queue priority>
 * 
 *************************/
 #include <stdio.h>
