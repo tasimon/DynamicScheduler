@@ -3,7 +3,7 @@ OBJS := sched_sim_04.o
 EXECUTABLE := sched_sim_04
 
 DEFS := 
-CFLAGS :=  -O0 -D DEBUG=0
+CFLAGS :=  -O0 -D DEBUG=1
 
 INCLUDES := 
 LDFLAGS := -lm 
