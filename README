@@ -5,7 +5,7 @@ tsimo1@umbc.edu
 ------------------------
 
 This is a suite of 3 scheduling simulators that are very similar. 
-They all use a single queue and dynamic job priorities. This means that each waiting job will have its priority modified based on it's size, duration and the properties of other waiting jobs.
+They all use a single queue and dynamic job priorities. This means that each waiting job will have its priority modified based on its size, duration and the properties of other waiting jobs.
 
 
  .  This directory contains a generic scheduler (sched_sim_04) with simple input files
