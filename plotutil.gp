@@ -112,8 +112,8 @@ set urange [ * : * ] noreverse nowriteback  # (currently [-5.00000:5.00000] )
 set vrange [ * : * ] noreverse nowriteback  # (currently [-5.00000:5.00000] )
 set yrange[0:1]
 set xlabel "Workload Runtime (seconds)"
-set ylabel "Percentage of System Utilization"
-set y2label "Number of Running Jobs"
+set ylabel "Percentage of System Utilization" tc rgb "red" 
+set y2label "Number of Running Jobs" tc rgb "green" 
 set zrange [ * : * ] noreverse nowriteback  # (currently [-10.0000:10.0000] )
 set cbrange [ * : * ] noreverse nowriteback  # (currently [-10.0000:10.0000] )
 set zero 1e-08
