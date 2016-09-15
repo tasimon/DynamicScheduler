@@ -16,10 +16,10 @@ inputfile : input.dat
 
 example: ./knapsack <capacity> <number of elements> <failure rate>
 
-./knapsack 100 5 2.3
+./knapsack 100 5 2
 
 Output:
-./knapsack 100 5 2.3
+./knapsack 100 5 2
 id 1, priority * weight = 2.400000
 id 2, priority * weight = 0.200000
 id 3, priority * weight = 0.050000

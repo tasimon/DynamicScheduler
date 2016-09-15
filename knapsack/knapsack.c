@@ -15,9 +15,9 @@ format of input.dat
 #include <math.h>
 
 
-double poisson(int, int);
+double poisson(float, int);
 double factorial(int);
-double expdist(int);
+double expdist(float);
 
 /* set to 0 or 1 if solving a continuous vs noncontinuous knapsack
 continuous means we can take a fraction of an item, otherwise we have 0/1 knapsack */
@@ -72,7 +72,7 @@ float r=0;
 nums *mynums;
 FILE *fp;
 /* the average task arrival rate per hour */
-int lambda=0;
+float lambda=0;
 double cumuprob=0;
 
 if (argc != 4)
@@ -91,7 +91,7 @@ else
 	
 	capacity=atoi(argv[1]);
 	n=atoi(argv[2]);
-	lambda = atoi(argv[3]);
+	lambda = atof(argv[3]);
 	}
 
 mynums=malloc(n*sizeof(nums));
@@ -135,7 +135,7 @@ i++;
 //note for below that the mean and variance is 2, result should be 18%
 printf("poiss(2,3) = %g%%\n", 100*poisson(2,3));
 
-printf("\n###FAILURE Stats failure rate = %d ###\n", lambda); 
+printf("\n###FAILURE Stats failure rate = %f ###\n", lambda); 
 printf("#item(i) arrival_time prob_1_failure prob_i_failures\n"); 
 for (i=1; i<=n; i++){
 	//cumuprob+=poisson(lambda,n);
@@ -158,13 +158,13 @@ double factorial(int n)
 // u = average rate occurences of event, 2 a day(lambda).
 // x = total occurence we would like to know, what is the probability of 3 failures if we know the average is 2(u) a day.
 // Note: The mean and variance of the distribution is u
-double poisson(int u, int x) { return(exp(-u)*pow(u,x))/(double)factorial(x);}
+double poisson(float u, int x) { return(exp(-u)*powf(u,x))/(double)factorial(x);}
 
 /* exponentiallly random distributed arrival rate */
 //digital dice, Paul Nahin, Appendix 8 pg 253
 //Time = -ln(rand())/lambda;
 // lambda average arrival rate per hour
-double expdist(int lambda){return(ceil(3600*log(random())/lambda));}
+double expdist(float lambda){return(ceil(3600*log(random())/lambda));}
 
 //A cumulative Poisson probability refers to the probability that the Poisson random variable is greater than some specified lower limit and less than some specified upper limit. 
 //P(x < 3, 5) = P(0; 5) + P(1; 5) + P(2; 5) + P(3; 5)
